@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "935287193149",
+    "project_id": "koduko-7754d",
+    "storage_bucket": "koduko-7754d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935287193149:android:e769d5711a6d381cdaf454",
+        "android_client_info": {
+          "package_name": "com.example.kodu_ko"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcvSOPwhv1-wqMMtwHJq8r4JV3QsT4sH8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
