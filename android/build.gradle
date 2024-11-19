@@ -1,14 +1,14 @@
-
 buildscript {
-    ext.kotlin_version = "1.9.10" // Replace with the latest Kotlin version or the one compatible with your setup
+    ext.kotlin_version = '1.8.22' // Ensure this is compatible with your project setup
     repositories {
         google()
         mavenCentral()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Use the Kotlin version here
-        classpath 'com.google.gms:google-services:4.4.2' // Firebase Google services
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9' // Optional: for Firebase Crashlytics
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Kotlin plugin for Gradle
+        classpath 'com.android.tools.build:gradle:8.1.0' // Make sure this aligns with your Gradle version (8.9)
+        classpath 'com.google.gms:google-services:4.4.2' // Google services for Firebase
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9' // Firebase Crashlytics, optional
     }
 }
 
@@ -29,4 +29,3 @@ subprojects {
 tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
-

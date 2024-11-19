@@ -16,7 +16,6 @@ import 'package:kodu_ko/services/tasks_provider.dart';
 import 'package:kodu_ko/services/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
-// import 'package:timezone/timezone.dart' as tz;
 
 void main() async {
   await Hive.initFlutter();
@@ -32,8 +31,6 @@ void main() async {
 
 Future<void> _configureLocalTimeZone() async {
   tz.initializeTimeZones();
-  // final String timeZoneName = await FlutterNativeTimezone.getLocalTimezone();
-  // tz.setLocalLocation(tz.getLocation(timeZoneName));
 }
 
 class MyApp extends StatelessWidget {

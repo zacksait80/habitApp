@@ -1,69 +1,8 @@
-//plugins {
-//    id "com.android.application"
-//    id "kotlin-android"
-//    // Apply the Flutter Gradle Plugin after Android and Kotlin plugins
-//    id "dev.flutter.flutter-gradle-plugin"
-//    // Apply the Google services plugin
-//    id "com.google.gms.google-services"
-//}
-//android {
-//    namespace "com.example.kodu_ko"  // Replace with your actual package name
-//    compileSdkVersion 33  // You can adjust this based on your requirements
-//    defaultConfig {
-//        applicationId "com.example.kodu_ko"
-//        minSdkVersion 23
-//        targetSdkVersion 33
-//    }
-//    // Other configurations
-//}
-//
-//android {
-//    namespace = "com.example.kodu_ko"
-//    compileSdk = flutter.compileSdkVersion
-//    ndkVersion = flutter.ndkVersion
-//
-//    compileOptions {
-//        sourceCompatibility = JavaVersion.VERSION_1_8
-//        targetCompatibility = JavaVersion.VERSION_1_8
-//    }
-//
-//    kotlinOptions {
-//        jvmTarget = "1.8"
-//    }
-//
-//    defaultConfig {
-//        // Replace with your unique application ID
-//        applicationId = "com.example.kodu_ko"
-//        minSdk = flutter.minSdkVersion
-//        targetSdk = flutter.targetSdkVersion
-//        versionCode = flutter.versionCode
-//        versionName = flutter.versionName
-//    }
-//
-//    buildTypes {
-//        release {
-//            // Add your own signing config for release builds
-//            signingConfig = signingConfigs.debug
-//        }
-//    }
-//}
-//
-//flutter {
-//    source = "../.."
-//}
-//
-//dependencies {
-//    // Add any required dependencies here
-//    // For example:
-//    // implementation 'com.google.firebase:firebase-analytics:21.0.0'
-//    // Other dependencies
-//}
 plugins {
     id "com.android.application"
     id "com.google.gms.google-services"
     id "kotlin-android"
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
-    id "dev.flutter.flutter-gradle-plugin"
+    id "dev.flutter.flutter-gradle-plugin" // Flutter plugin after Android and Kotlin plugins
 }
 
 android {
@@ -77,14 +16,12 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8
+        jvmTarget = "1.8"
     }
 
     defaultConfig {
         applicationId = "com.example.kodu_ko"
-
-        // Set minSdkVersion to 23 as required by firebase_auth
-        minSdk = 23  // Manually setting minSdkVersion to 23
+        minSdk = 23 // Setting minSdkVersion to 23 for firebase_auth compatibility
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -92,8 +29,8 @@ android {
 
     buildTypes {
         release {
-            // Signing config (for debugging purposes, use debug signing config)
-            signingConfig = signingConfigs.debug
+            minifyEnabled false // Disable code shrinking for simplicity
+            signingConfig = signingConfigs.debug // Use debug config for testing (adjust for release)
         }
     }
 }
